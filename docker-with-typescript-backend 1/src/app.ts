@@ -9,10 +9,20 @@ const app: Application = express();
 //parsers
 app.use(express.json());
 
+// Welcome route
 app.get("/", (req: Request, res: Response) => {
-  res.status(200).json({
-    message: "Welcome to the Docker!!! ",
-  });
+  res.status(200).send(`
+   <html>
+      <head>
+        <title>Docker Logs Viewer</title>
+        <link rel="stylesheet" href="/styles.css">
+      </head>
+      <body>
+        <h1>Welcome to the Docker Logs Viewer Page!</h1>
+        <p>Go to <a href="/logs/errors">Error Logs</a> or <a href="/logs/successes">Success Logs</a>.</p>
+      </body>
+    </html>
+  `);
 });
 
 //throwing an error
