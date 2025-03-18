@@ -16,7 +16,7 @@ app.get("/", (req: Request, res: Response) => {
   res.status(200).send(`
    <html>
       <head>
-        <title>Docker Logs Viewer</title>
+        <title>Docker Logs Viewer page </title>
         <link rel="stylesheet" href="/styles.css">
       </head>
       <body>
